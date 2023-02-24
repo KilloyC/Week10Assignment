@@ -65,7 +65,7 @@ function onDelete(td) {
 
 //Resets the data
 function resetForm() {
-    document.getElementById('author').value = ''; //assinging the value of each element to an empty string.
+    document.getElementById('author').value = ''; //assigning the value of each element to an empty string.
     document.getElementById('bTitle').value = '';
     document.getElementById('bSeries').value = '';
     document.getElementById('bRating').value = '';
