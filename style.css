@@ -1,0 +1,26 @@
+.col-md-6:hover {
+    color: yellow;
+}
+
+.bg-img {
+    background-image: url(./img/library2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .6);
+    background-blend-mode: multiply;
+}
+
+body {
+    background: linear-gradient(to right, #ee7724, #562e06, #482302, #0f010b);
+}
+
+.h1-responsive {
+    color: goldenrod;
+    font-family:cursive;
+}
+
+/* button {
+    all: unset !important; overrides all style on the buttons.
+    border: 1px solid white !important;
+} */
