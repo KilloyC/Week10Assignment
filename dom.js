@@ -5,9 +5,9 @@ function onFormSubmit(e) {
     event.preventDefault(); //if the event doesn't get explicitly handled, it won't run its default action.
     let formData = readFormData();
     if(selectedRow === null){
-        insertNewRecord(formData);
+        insertNewBook(formData);
     } else {
-        updateRecord(formData);
+        updateBook(formData);
     }
     resetForm();
 }
@@ -26,7 +26,7 @@ function readFormData() {
 let rowId = 0;
 
 //Inserts the data
-function insertNewRecord(data) {
+function insertNewBook(data) {
     let table = document.getElementById("tableData").getElementsByTagName("tbody")[0];
     let newRow = table.insertRow(table.length);
     rowId++; //increments each new row added.
@@ -45,7 +45,7 @@ function insertNewRecord(data) {
 }
 
 //updating each array with the current content for each element.
-function updateRecord(formData) {
+function updateBook(formData) {
     selectedRow.cells[0].innerHTML = formData.author;
     selectedRow.cells[1].innerHTML = formData.bTitle;
     selectedRow.cells[2].innerHTML = formData.bSeries;
@@ -56,7 +56,7 @@ function updateRecord(formData) {
 function onDelete(td) {
     // console.log(td.parentElement);
     // console.log(td.parentElement.parentElement); shows what the parentElement is.
-    if(confirm('Do you want to delete this record?')){ //adds an alert to ask if you want to delete the row.
+    if(confirm('Do you want to delete this book?')){ //adds an alert to ask if you want to delete the row.
         row = td.parentElement.parentElement;
         document.getElementById('tableData').deleteRow(row.rowIndex);
     }
